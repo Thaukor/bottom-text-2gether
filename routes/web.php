@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('base', ['login' => true]);
-})->name('login');
+Route::post('/profile', function() {
+    return view('authUsers.profile');
+})->name('profile');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

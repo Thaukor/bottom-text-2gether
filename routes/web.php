@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Controllers
+use App\Http\Controllers\TestController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/profile', function() {
-    return view('authUsers.profile');
-})->name('profile');
+Route::post('/profile', [TestController::class, 'test'])->name('profile');
 
 Auth::routes();
 

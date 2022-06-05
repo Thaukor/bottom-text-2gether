@@ -19,6 +19,7 @@
                             <hr>
                             <p><b>Fecha nacimiento: </b>3/11/2000 <br>
                             <b>Celular: </b> +56912345678 <br>
+                            <b>Bio: </b> {{ $test }} <br>
                             <b>Correo: </b>ejemplo@pregrado.uoh.cl</p>
                         </div>
                     </div>

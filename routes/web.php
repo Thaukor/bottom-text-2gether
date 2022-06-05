@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/profile', [TestController::class, 'test'])->name('profile');
+Route::get('/profile', [TestController::class, 'test'])->name('profile');
 
 Auth::routes();
 

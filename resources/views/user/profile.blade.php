@@ -15,17 +15,18 @@
                             <img src="https://pwco.com.sg/wp-content/uploads/2020/05/Generic-Profile-Placeholder-v3-800x800.png" class="img-fluid" width="" height="" alt="User profile photo">
                         </div>
                         <div class="col-md-9">
-                            <h4 class="user-name">Nombre Apellido</h4>
+                            <h4 class="user-name">{{ Auth::user()->name }}</h4>
                             <hr>
                             <p><b>Fecha nacimiento: </b>3/11/2000 <br>
                             <b>Celular: </b> +56912345678 <br>
-                            <b>Bio: </b> {{ $test }} <br>
-                            <b>Correo: </b>ejemplo@pregrado.uoh.cl</p>
+                            <b>Bio: </b> {{ Auth::user()->bio }} <br>
+                            <b>Correo: </b>{{ Auth::user()->email }}</p>
                         </div>
                     </div>
+
                     <div class="row pt-4">
                         <div class="col-md-12">
-                            <button class="btn btn-primary text-center">Modificar visibilidad información</button>
+                            <button class="btn btn-primary text-center">Editar</button>
                         </div>
                     </div>
                 </div>

@@ -1,13 +1,21 @@
 
 
-html,body{
-background-color: rgba(101,44,179,0.3);
+html{
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
+font-size: 100%;
 
 }
+body{
+  background-color: rgba(101,44,179,0.3);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+  
+  }
 
 .container{
 height: 100%;
@@ -125,7 +133,7 @@ z-index: 2;
     text-align: center;
 }
 .footer1{
-  height: 4.5rem;
+  height: 3.5rem;
   width: max-content;
   background-color: rgba(101,44,179,0.3);
   width: 100%;
@@ -133,17 +141,15 @@ z-index: 2;
 }
 
 #dog {
-  height:3.5em;
+  height:3.5rem;
   position: relative;
 }
 #dog:hover{
   animation: flotar 1s;
 }
-
 #txt_well{
   text-align: center;
 }
-
 @keyframes flotar {
   0% , 100% {padding: 0px;}
   30% {padding: 12px;}
@@ -158,4 +164,30 @@ z-index: 2;
   border-radius: 3px;
   padding:0.3em;
   margin-left: -0.8rem;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9886b2; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #652cb3; 
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+#map {
+  height: 100%;
 }

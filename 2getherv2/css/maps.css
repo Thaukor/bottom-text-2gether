@@ -193,6 +193,7 @@ z-index: 2;
 }
 #dog:hover{
   animation: flotar 1s;
+  cursor: pointer;
 }
 #txt_well{
   text-align: center;

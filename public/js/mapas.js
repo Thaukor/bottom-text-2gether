@@ -1,5 +1,5 @@
 function play() {
-    var audio = new Audio('/recursos/bark.mp3');
+    var audio = new Audio('../img/bark.mp3');
     audio.volume = 0.03;
     audio.play();
   }

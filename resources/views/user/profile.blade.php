@@ -18,7 +18,7 @@
                             <h4 class="user-name">{{ Auth::user()->name }}</h4>
                             <hr>
                             <p><b>Fecha nacimiento: </b>3/11/2000 <br>
-                                <b>Celular: </b> +56912345678 <br>
+                                <b>Celular: </b> +56{{ Auth::user()->phone }} <br>
                                 <b>Bio: </b> {{ Auth::user()->bio }} <br>
                                 <b>Correo: </b>{{ Auth::user()->email }}</p>
                             </div>

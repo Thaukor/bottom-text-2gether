@@ -1,0 +1,90 @@
+html,body{
+    background-color: rgba(101,44,179,0.3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    
+}
+
+.locationviewer {
+    background-color: white;
+    height: 10rem;
+    border-radius: 10px;
+    border-color:rgba(101,44,179,0.3);
+    border-style: solid;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 0%;
+    width: 40%;
+    padding:10px;
+    position: relative;
+    z-index: 100;
+    margin-bottom: -5rem; 
+}
+
+#txt1 {
+    display: block;
+    border-style: solid;
+    margin: auto;
+    width: 70%;
+    height: 30%;
+    padding:10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    border-color:rgba(101,44,179,0.3);
+    text-align: center;
+}
+#txt2 {
+    display: block;
+    border-style: solid;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    height: 30%;
+    padding:10px;
+    border-radius: 15px;
+    border-color:rgba(101,44,179,0.3);
+    text-align: center;
+}
+.footer1{
+    height: 4.5rem;
+    width: max-content;
+    background-color: rgba(101,44,179,0.3);
+    width: 100%;
+    
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+#dog {
+    height:3.5em;
+    position: relative;
+}
+#dog:hover{
+    animation: flotar 1s;
+}
+
+#txt_well{
+    text-align: center;
+    font-weight: bolder;
+    color:rgb(80, 80, 80);
+}
+
+@keyframes flotar {
+    0% , 100% {padding: 0px;}
+    30% {padding: 12px;}
+    
+    
+}
+
+#bt {
+    display: inline;
+    color: #ddd;
+    background-color: rgba(103, 40, 3, 0.583);
+    border-radius: 3px;
+    padding:0.3em;
+    margin-left: -0.8rem;
+}

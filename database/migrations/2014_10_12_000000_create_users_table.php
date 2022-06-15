@@ -22,6 +22,7 @@ return new class extends Migration
                 $table->string('password');
                 
                 $table->string('bio')->nullable();
+                $table->integer('phone')->nullable();
                 $table->date('bdate')->nullable();
                 
                 $table->rememberToken();

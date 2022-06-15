@@ -18,6 +18,7 @@ return new class extends Migration
                 $table->id();
                 $table->unsignedBigInteger('location_id');
                 $table->string('day');
+                $table->boolean('available');
 
                 $table->foreign('location_id')->references('id')->on('common_locations');
             });

@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\DB;
 
 class UserScheduleController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     private function get_locations() {
         return DB::table('common_locations')->get();
     }

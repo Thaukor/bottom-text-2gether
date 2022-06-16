@@ -23,8 +23,8 @@
                     <h5 class="modal-title" id="lookForGroupModalLabel">Buscar grupo</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form method="post" action="{{ route('schedule.store') }}" id="add-schedule">
+                <form method="post" action="{{ route('schedule.store') }}" id="add-schedule">
+                    <div class="modal-body">
                         @csrf
                         <div class="justify-content-center row mb-2">
                             <div class="col-md-3">
@@ -63,11 +63,11 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-primary" value="Guardar">
+                    </div>
+                </form>
             </div>
         </div>
     </div>

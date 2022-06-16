@@ -8,7 +8,7 @@
 <div class="container">
     <div class="locationviewer">
         <h4 id="txt_well">¿Cuál es tu destino?</h4>
-        <input type="text" class="textstyle" id="txt1" placeholder="Tu destino...">
+        <input type="text" id="txt1" placeholder="Tu destino...">
         <div class="mt-2">
             <div class="text-center">
                 <button class="btn btn-success" data-bs-toggle="modal" onclick="getLocation()" data-bs-target="#lookForGroupModal">Buscar grupos</button>
@@ -81,12 +81,23 @@
 </footer>
 
 <script>
+    locations = []
+    @foreach ($locations as $location)
+    locations.push("{{$location->location}}");
+    @endforeach
+    
+    $( function() {
+        $('#txt1').autocomplete({
+            source: locations
+        });
+    })
+    
     function getLocation() {
         $.ajax({
             type:'GET',
             url:'/location/' + $('#txt1').val(),
             data:'_token = <?php echo csrf_token() ?>',
-
+            
             success: function(data) {
                 $('#destination option[value="' + data + '"').prop('selected', true);
             },

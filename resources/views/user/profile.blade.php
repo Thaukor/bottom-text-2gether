@@ -61,7 +61,7 @@
                         
                         <hr>
                         
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNew">Editar</button>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNew" disabled>Editar</button>
                     </div>
                     
                     <!-- User schedule modal -->
@@ -74,43 +74,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <form action="POST">
-                                        @csrf
-                                        <div class="justify-content-center row mb-2">
-                                            <div class="col-md-3">
-                                                <label for="day">Día</label>
-                                                <select name="day" id="day" class="form-control">
-                                                    <option value="1">Lunes</option>
-                                                    <option value="2">Martes</option>
-                                                    <option value="3">Miércoles</option>
-                                                    <option value="4">Jueves</option>
-                                                    <option value="5">Viernes</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-1"></div>
-                                            <div class="col-md-3">
-                                                <label for="time">Hora</label>
-                                                <input type="time" name="time" id="time">
-                                            </div>
-                                        </div>
-                                        <div class="row justify-content-center mb-3">
-                                            <div class="col-md-7">
-                                                <label for="destination">Destino</label>
-                                                <select name="destination" id="destination" class="form-control">
-                                                    @foreach ($locations as $location)
-                                                        <option value="{{ $location->id }}">{{ $location->location }}</option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </div>
-
-                                        <div class="row justify-content-center">
-                                            <div class="col-md-7">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="repeat" id="repeat">
-                                                    <label class="form-check-label" for="repeat">Repetir</label>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        
                                         
                                     </form>
                                 </div>

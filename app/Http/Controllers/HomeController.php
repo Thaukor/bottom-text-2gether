@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -16,6 +17,14 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    private function get_locations() {
+        return DB::table('common_locations')->get();
+    }
+
+    private function get_user_schedules() {
+        return auth()->user()->id;
+    }
+
     /**
      * Show the application dashboard.
      *
@@ -23,6 +32,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $locations = Self::get_locations();
+        $user_schedules = Self::get_user_schedules();
+        return view('home', ['locations' => $locations, 'schedule' => $user_schedules]);
     }
 }

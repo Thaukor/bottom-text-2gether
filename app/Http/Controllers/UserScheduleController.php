@@ -36,6 +36,14 @@ class UserScheduleController extends Controller
     }
 
     /**
+     * Searches for a location matching the name
+     * 
+     */
+    public function get_location($location) {
+        return DB::table('common_locations')->where('location', $location)->value('id');
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

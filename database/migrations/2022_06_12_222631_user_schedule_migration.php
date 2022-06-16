@@ -18,7 +18,7 @@ return new class extends Migration
             Schema::create('user_schedules', function (Blueprint $table) {
                 $table->id();
                 $table->unsignedBigInteger('user_id');
-                $table->string('day');
+                $table->integer('day');
                 
                 $table->time('time');
                 

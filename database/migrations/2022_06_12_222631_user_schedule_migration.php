@@ -21,11 +21,14 @@ return new class extends Migration
                 $table->integer('day');
                 
                 $table->time('time');
+
+                $table->unsignedBigInteger('destination_id');
                 
                 $table->boolean('active');
                 $table->boolean('repeat');
 
                 $table->foreign('user_id')->references('id')->on('users');
+                $table->foreign('destination_id')->references('id')->on('common_locations');
             });
         }
     }

@@ -62,6 +62,18 @@ class UserScheduleController extends Controller
     public function store(Request $request)
     {
         //
+        $repeat = ($request->input('repeat') == 'on');
+
+        $id = DB::table('user_schedules')->insertGetId([
+            'user_id' => auth()->user()->id,
+            'day' => $request->input('day'),
+            'time' => $request->input('time'),
+            'destination_id' => $request->input('destination'),
+            'repeat' => $repeat,
+            'active' => true
+        ]);
+        
+        return response()->json(['success'=>'Entrada creada con id ' . $id . ' exitosamente']);
     }
 
     /**

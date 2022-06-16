@@ -90,7 +90,7 @@
         $('#txt1').autocomplete({
             source: locations
         });
-    })
+    });
     
     function getLocation() {
         $.ajax({
@@ -106,6 +106,28 @@
             }
         });
     }
+
+    $('#add-schedule').on('submit', function(event) {
+        event.preventDefault();
+
+        var url = '{{ route("schedule.store") }}';
+
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: new FormData(this),
+            dataType: 'JSON',
+            contentType: false,
+            cache: false,
+            processData: false,
+            success: function(response) {
+                alert(response.success);
+            },
+            error: function(response) {
+                alert(response);
+            }
+        })
+    });
 </script>
 
 @endsection

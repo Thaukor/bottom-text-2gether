@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 // Controllers
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MatchController;
 use App\Http\Controllers\UserScheduleController;
 
 /*
@@ -23,8 +24,9 @@ Route::get('/', function () {
 });
 
 //Route::get('/profile', [UserScheduleController::class, 'index'])->name('profile');
+Route::resource('match', MatchController::class)->only(['show', 'store'])->middleware('auth');
 
-Route::resource('/profile', UserController::class)->only(['index'])->middleware('auth');
+Route::resource('/profile', UserScheduleController::class)->only(['index'])->middleware('auth');
 
 Route::resource('schedule', UserScheduleController::class)->only(['index', 'store'])->missing(function (Request $request) {
     return Redirect::route('home');

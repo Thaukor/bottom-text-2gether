@@ -18,14 +18,17 @@ return new class extends Migration
             Schema::create('user_schedules', function (Blueprint $table) {
                 $table->id();
                 $table->unsignedBigInteger('user_id');
-                $table->string('day');
+                $table->integer('day');
                 
                 $table->time('time');
+
+                $table->unsignedBigInteger('destination_id');
                 
                 $table->boolean('active');
                 $table->boolean('repeat');
 
                 $table->foreign('user_id')->references('id')->on('users');
+                $table->foreign('destination_id')->references('id')->on('common_locations');
             });
         }
     }
@@ -37,6 +40,8 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+        Schema::dropIfExists('user_schedules');
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1');
     }
 };

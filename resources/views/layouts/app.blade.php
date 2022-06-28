@@ -10,7 +10,7 @@
     <title>{{ config('app.name', '2Gether') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/mapas.js') }}"></script>
 
     <!-- Fonts -->

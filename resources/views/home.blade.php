@@ -6,15 +6,17 @@
 
 @section('content')
 <div class="container">
-    <div class="locationviewer">
-        <h4 id="txt_well">¿Cuál es tu destino?</h4>
-        <input type="text" id="txt1" placeholder="Tu destino...">
-        <div class="mt-2">
-            <div class="text-center">
-                <button class="btn btn-success" data-bs-toggle="modal" onclick="getLocation()" data-bs-target="#lookForGroupModal">Buscar grupos</button>
+    <div class="row">
+        <div class="locationviewer">
+            <h4 id="txt_well">¿Cuál es tu destino?</h4>
+            <input type="text" id="txt1" placeholder="Tu destino...">
+            <div class="mt-2">
+                <div class="text-center">
+                    <button class="btn btn-success" data-bs-toggle="modal" onclick="getLocation()" data-bs-target="#lookForGroupModal">Buscar grupos</button>
+                </div>
             </div>
+            
         </div>
-        
     </div>
     <div class="modal" id="lookForGroupModal" tabindex="-1" aria-labelledby="lookForGroupModal" aria-hidden="true">
         <div class="modal-dialog">
@@ -71,9 +73,27 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Modal end -->
+    <br><br><br><br><br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <h2 class="text-center">Revisa tus entradas creadas!</h2>
+            <hr>
+            @foreach ($schedule as $sch)
+            <p>
+                Destino: {{ $sch['destination'] }}
+                <br>
+                Día: {{ $sch['day'] }}
+                <br>
+                Hora: {{ $sch['time'] }}
+            </p>
 
+            <a href="{{ url('match/' . $sch['id']) }}" class="btn btn-success">Ver</a>
+            @endforeach
+        </div>
+    </div>
     <div class="d-flex justify-content-center h-100">
         
     </div>
@@ -109,12 +129,12 @@
             }
         });
     }
-
+    
     $('#add-schedule').on('submit', function(event) {
         event.preventDefault();
-
+        
         var url = '{{ route("schedule.store") }}';
-
+        
         $.ajax({
             url: url,
             method: 'POST',
@@ -124,10 +144,10 @@
             cache: false,
             processData: false,
             success: function(response) {
-                alert(response.success);
+                console.log(response.success);
             },
             error: function(response) {
-                alert(response);
+                console.log(response);
             }
         })
     });

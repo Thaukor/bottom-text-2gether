@@ -96,7 +96,8 @@ class MatchController extends Controller
             ]);
         }
 
-        return $f_members;
+
+        return response()->json(['members' => $f_members, 'group_id' => $id]);
     }
 
     /**
@@ -151,5 +152,10 @@ class MatchController extends Controller
     public function destroy($id)
     {
         //
+        $deleted = DB::table('group_participant')
+            ->where('user_id', auth()->user()->id)
+            ->where('group_id', $id)
+            ->delete();
+        return response()->json(['data' => $id, 'id_user' => auth()->user()->id, 'msg' => 'Entrada borrada']);
     }
 }

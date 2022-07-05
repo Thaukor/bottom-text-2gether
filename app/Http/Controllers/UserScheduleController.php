@@ -13,14 +13,6 @@ class UserScheduleController extends Controller
         $this->middleware('auth');
     }
 
-    private function get_locations() {
-        return DB::table('common_locations')->get();
-    }
-
-    private function get_user_schedules() {
-        return auth()->user()->id;
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -28,19 +20,7 @@ class UserScheduleController extends Controller
      */
     public function index()
     {
-        //
-        $locations = Self::get_locations();
-        $user_schedules = Self::get_user_schedules();
-
-        return view('user.profile', ['locations' => $locations, 'schedule' => $user_schedules]);
-    }
-
-    /**
-     * Searches for a location matching the name
-     * 
-     */
-    public function get_location($location) {
-        return DB::table('common_locations')->where('location', $location)->value('id');
+        return view('user.profile');
     }
 
     /**

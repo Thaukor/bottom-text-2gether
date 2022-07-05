@@ -26,7 +26,7 @@ Route::get('/', function () {
 //Route::get('/profile', [UserScheduleController::class, 'index'])->name('profile');
 Route::resource('match', MatchController::class)->only(['show', 'store', 'destroy'])->middleware('auth');
 
-Route::resource('/profile', UserScheduleController::class)->only(['index'])->middleware('auth');
+Route::resource('/profile', UserScheduleController::class)->only(['index', 'show'])->middleware('auth');
 
 Route::resource('schedule', UserScheduleController::class)->only(['index', 'store'])->missing(function (Request $request) {
     return Redirect::route('home');

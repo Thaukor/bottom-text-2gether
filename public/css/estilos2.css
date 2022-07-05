@@ -1,9 +1,16 @@
-html,body{
+html {
     background-color: rgba(101,44,179,0.3);
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+
+    position: relative;
+    min-height: 100%;
+}
+
+.main-content {
+    margin-bottom: 4.5rem;
 }
 
 .locationviewer {
@@ -48,15 +55,16 @@ html,body{
 }
 
 .footer1{
-    min-height: 4.5rem;
+    height: 4.5rem;
     /* width: max-content; */
     background-color: rgba(18, 2, 41, 0.616);
     width: 100%;
-    margin-top: 5vh;
+    margin-top: 4.5rem;
     margin-bottom: 0;
     padding-bottom: 0;
 
-    /* position: absolute; */
+    position: absolute;
+    left: 0;
     bottom: 0;
     /* overflow: hidden; */
 }
@@ -89,4 +97,10 @@ html,body{
     border-radius: 3px;
     /* padding:0.3em; */
     /* margin-left: -0.8rem; */
+}
+
+.schedule-list .destination {
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: bold;
 }

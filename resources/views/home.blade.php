@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container main-content">
     <div class="row">
         <div class="locationviewer">
             <h4 id="txt_well">¿Cuál es tu destino?</h4>
@@ -97,8 +97,151 @@
                             <td>time_replace</td>
                             <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
                             <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr><tr>
                             <td class="text-center" width="40%">
                                 <span class="destination">destination_replace</span>
                                 <br>
@@ -108,114 +251,10 @@
                             <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
                             <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
                         </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-                        <tr>
-                            <td class="text-center" width="40%">
-                                <span class="destination">destination_replace</span>
-                                <br>
-                                <span class="day">day_replace</span>
-                            </td>
-                            <td>time_replace</td>
-                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
-                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
-                        </tr>
-
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
-    <div class="d-flex justify-content-center h-100">
-        
     </div>
 </div>
 
@@ -231,6 +270,21 @@
         });
     });
     
+    function formatScheduleEntryHTML(destination, day, url, id) {
+        sFormat = ```
+        <tr>
+            <td class="text-center" width="40%">
+                <span class="destination">destination_replace</span>
+                <br>
+                <span class="day">day_replace</span>
+            </td>
+            <td>time_replace</td>
+            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+        </tr>
+        ```
+    }
+
     function getLocation() {
         $.ajax({
             type:'GET',

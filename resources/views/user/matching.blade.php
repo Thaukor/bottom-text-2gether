@@ -2,6 +2,8 @@
 
 @section('css_links')
 <link href="{{ asset('css/estilos2.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/match.css') }}">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <style>
     .bigger-text {
         font-weight: bold;
@@ -32,7 +34,7 @@
             @csrf
             <input type="hidden" name="day" value="{{ $data['day'] }}">
             <input type="hidden" name="destination" value="{{ $data['destination_id'] }}">
-            <input class="btn btn-success" type="submit" value="Recargar">
+            <btn id="search-btn" class="btn btn-success" onclick="start_group_search()"> Buscar grupo </btn>
             <p id="results"></p>
         </form>
     </div>
@@ -56,15 +58,24 @@
             </div>
         </div>
     </div>
-
+    
 </div>
 <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <hr>
-        <h4 class="text-center">Participantes del grupo</h4>
-        <div id="group-container">
-
+        <div class="card">
+            <div class="card-header">
+                <h4 class="text-center">Participantes del grupo</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <tbody id="group-container">
+                        
+                    </tbody>
+                </table>
+            </div>
+            
         </div>
     </div>
 </div>
@@ -74,21 +85,35 @@
 <script>
     function update_members(members) {
         var html_to_add = ""
-
+        
         members.forEach(element => {
-            html_to_add += element['name'] + "<br>";
+            html_to_add += "<tr><td>" + element['name'] + "</td></tr>";
         });
-
+        
         $('#group-container').html(html_to_add);
-
+        
     }
     group_id = -1;
     group_found = false;
+    var interval
 
+    function start_group_search() {
+        $('#check-groups').submit();
+        $('#search-btn').prop('disabled', true);
+        $('#search-btn').addClass('disabled');
+        $('#search-btn').html('Buscando');
+
+        interval = setInterval(update_group, 5000);
+    }
+
+    function update_group() {
+        $('#check-groups').submit();
+    }
+    
     $('#check-groups').on('submit', function(event) {
         event.preventDefault();
         var url = '{{ route("match.store") }}';
-
+        
         $.ajax({
             url: url,
             method: 'POST',
@@ -104,7 +129,7 @@
                     group_found = true;
                     $('#status').html('Esperando');
                     $('#title-group').html('Grupo');
-
+                    
                     group_id = response.group_id;
                 }
             },
@@ -116,11 +141,17 @@
     
     $('#leave-group-form').on('submit', function(event) {
         event.preventDefault();
+        // Stop auto update
+        clearInterval(interval)
+        // Enable search group btn
+        $('#search-btn').prop('disabled', false);
+        $('#search-btn').html('Buscar grupo');
+        $('#search-btn').removeClass('disabled');
 
         var url = '/match/' + group_id;
         console.log(url)
         console.log(group_id);
-
+        
         $.ajax({
             url: url,
             type: 'DELETE',
@@ -138,21 +169,21 @@
             }
         });
     });
-
+    
     $('#user-status').on('submit', function(event) {
         event.preventDefault();
-
+        
         btn = $('#user-status-btn');
         status = $('#status');
         if (btn.val() == 'Estoy en camino') {
             $('#status').html('En camino a tu destino...');
-
+            
             btn.val('Llegué');
             btn.removeClass('btn-warning');
             btn.addClass('btn-success');
         } else if (btn.val() == 'Llegué') {
             $('#status').html('Llegaste a tu destino');
-
+            
             btn.removeClass('btn-success');
             btn.addClass('btn-warning');
             btn.val('Estoy en camino');

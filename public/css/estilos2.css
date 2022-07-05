@@ -2,7 +2,8 @@ html,body{
     background-color: rgba(101,44,179,0.3);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;    
+    margin: 0;
+    padding: 0;
 }
 
 .locationviewer {
@@ -45,16 +46,19 @@ html,body{
     border-color:rgba(101,44,179,0.3);
     text-align: center;
 }
+
 .footer1{
-    height: 4.5rem;
-    width: max-content;
-    background-color: rgba(101,44,179,0.3);
+    min-height: 4.5rem;
+    /* width: max-content; */
+    background-color: rgba(18, 2, 41, 0.616);
     width: 100%;
-    
-    position: absolute;
-    left: 0;
+    margin-top: 5vh;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    /* position: absolute; */
     bottom: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #dog {
@@ -83,6 +87,6 @@ html,body{
     color: #ddd;
     background-color: rgba(103, 40, 3, 0.583);
     border-radius: 3px;
-    padding:0.3em;
-    margin-left: -0.8rem;
+    /* padding:0.3em; */
+    /* margin-left: -0.8rem; */
 }

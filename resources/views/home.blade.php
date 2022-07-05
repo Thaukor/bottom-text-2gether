@@ -2,6 +2,7 @@
 
 @section('css_links')
 <link href="{{ asset('css/estilos2.css') }}" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 @endsection
 
 @section('content')
@@ -79,29 +80,144 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <h2 class="text-center">Revisa tus entradas creadas!</h2>
-            <hr>
-            @foreach ($schedule as $sch)
-            <p>
-                Destino: {{ $sch['destination'] }}
-                <br>
-                Día: {{ $sch['day'] }}
-                <br>
-                Hora: {{ $sch['time'] }}
-            </p>
+            <div class="schedule_list">
+                <table class="table table-striped align-middle">
+                    <thead>
+                        <tr class="text-center">
+                            <td colspan="4" width="100%"><h2>Revisa tus entradas creadas</h2></td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" width="40%">
+                                <span class="destination">destination_replace</span>
+                                <br>
+                                <span class="day">day_replace</span>
+                            </td>
+                            <td>time_replace</td>
+                            <td width="10%"><a href="url_replace" class="btn btn-success">Ir</a></td>
+                            <td width="10%"><button onclick="delete_schedule_on( delete_replace )" class="btn btn-danger">Eliminar</button></td>
+                        </tr>
 
-            <a href="{{ url('match/' . $sch['id']) }}" class="btn btn-success">Ver</a>
-            @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
     <div class="d-flex justify-content-center h-100">
         
     </div>
 </div>
-<footer class="footer1">
-    <img src="{{ asset('img/logbom.png') }}" alt="hol4"  id="dog" onpointerover="play()" onclick="rickroll('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
-    <p id="bt">bottom text</p>
-</footer>
 
 <script>
     locations = []
@@ -125,9 +241,34 @@
                 $('#destination option[value="' + data + '"').prop('selected', true);
             },
             error: function (err) {
-                alert(err);
+                console.log('Destino no reconocido, por favor selecciona uno de la lista');
             }
         });
+    }
+    
+    $(document).ready(function() {
+        getUserSchedule();
+    });
+    
+    function getUserSchedule() {
+        url = '{{ route("schedule.index") }}';
+        
+        $.ajax({
+            url: url,
+            method: 'GET',
+            success: function(response) {
+                console.log(response);
+                uptadeUserSchedule();
+            },
+            error: function(response) {
+                alert('Ocurrió un error al recuperar la lista de destinos del usuario:(\nIntenta recargar la página');
+                console.log(response);
+            }
+        });
+    }
+    
+    function uptadeUserSchedule() {
+        
     }
     
     $('#add-schedule').on('submit', function(event) {
@@ -153,4 +294,11 @@
     });
 </script>
 
+@endsection
+
+@section('footer')
+<footer class="footer1">
+    <img src="{{ asset('img/logbom.png') }}" alt="hol4"  id="dog" onpointerover="play()" onclick="rickroll('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+    <p id="bt">bottom text</p>
+</footer>
 @endsection

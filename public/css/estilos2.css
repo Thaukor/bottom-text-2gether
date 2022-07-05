@@ -2,9 +2,7 @@ html,body{
     background-color: rgba(101,44,179,0.3);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
-    font-family: 'Numans', sans-serif;
-    
+    height: 100%;    
 }
 
 .locationviewer {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -14,7 +15,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return view('user.profile');
     }
 
     /**
@@ -41,12 +42,17 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id)
     {
         //
+        $user = DB::table('users')
+            ->select(['name', 'phone', 'bio'])
+            ->where('id', $id)
+            ->first();
+
+        return view('user.other_profile', ['data' => $user]);
     }
 
     /**

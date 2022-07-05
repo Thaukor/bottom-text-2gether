@@ -1,0 +1,124 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+html{
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizeLegibility;
+
+}
+body{
+  background-color: rgba(101,44,179,0.3);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Numans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  }
+
+
+
+.topnav {
+    overflow: hidden;
+    background-color: white;
+    border-radius: 3px;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #652cb3;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+}
+
+
+
+.container {
+  margin: 60px auto;
+  background: #fff;
+  padding: 0;
+  border-radius: 7px;
+}
+
+.footer1{
+  height: 3.5rem;
+  width: max-content;
+  background-color: rgba(101,44,179,0.3);
+  width: 100%;
+ 
+}
+
+#dog {
+  height:3.5em;
+  position: relative;
+}
+#dog:hover{
+  animation: flotar 1s;
+  cursor: pointer;
+}
+#txt_well{
+  text-align: center;
+}
+@keyframes flotar {
+  0% , 100% {padding: 0px;}
+  30% {padding: 12px;}
+
+
+}
+
+#bt {
+  display: inline;
+  color: #ddd;
+  background-color: rgba(103, 40, 3, 0.583);
+  border-radius: 3px;
+  padding:0.3em;
+  margin-left: -0.8rem;
+}
+

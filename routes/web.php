@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Controllers
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserScheduleController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +21,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/profile', function() {
-    return view('authUsers.profile');
-})->name('profile');
+//Route::get('/profile', [UserScheduleController::class, 'index'])->name('profile');
 
+Route::resource('/profile', UserScheduleController::class)->only(['index'])->missing(function (Request $request) {
+    return Redirect::route('profile.index');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

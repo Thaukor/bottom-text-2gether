@@ -23,6 +23,7 @@ return new class extends Migration
                 
                 $table->string('bio')->nullable();
                 $table->date('bdate')->nullable();
+                $table->integer('phone')->nullable();
                 
                 $table->rememberToken();
                 $table->timestamps();

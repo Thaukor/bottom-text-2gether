@@ -1,15 +1,11 @@
 
 
-@import url('https://fonts.googleapis.com/css?family=Numans');
-
 html{
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-text-rendering: optimizeLegibility;
+font-size: 100%;
 
 }
 body{
@@ -18,11 +14,28 @@ body{
   background-repeat: no-repeat;
   height: 100%;
   font-family: 'Numans', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
   
   }
+
+.container{
+height: 100%;
+width:auto;
+align-content: center;
+margin:auto;
+padding: 0;
+z-index: 1;
+position: absolute;
+
+}
+
+.card{
+height: 100%;
+position: absolute;
+margin-bottom: 0;
+width:100%;
+z-index: 2;
+
+}
 
 
 
@@ -30,6 +43,7 @@ body{
     overflow: hidden;
     background-color: white;
     border-radius: 3px;
+
   }
   
   .topnav a {
@@ -78,15 +92,46 @@ body{
     }
 }
 
-
-
-.container {
-  margin: 60px auto;
-  background: #fff;
-  padding: 0;
-  border-radius: 7px;
+.locationviewer {
+    background-color: white;
+    height: 10rem;
+    border-radius: 10px;
+    border-color:rgba(101,44,179,0.3);
+    border-style: solid;
+    margin: auto;
+    margin-top: 5rem;
+    margin-bottom: 0%;
+    width: 40%;
+    padding:10px;
+    position: relative;
+    z-index: 100;
+    margin-bottom: -5rem; 
 }
 
+#txt1 {
+    display: block;
+    border-style: solid;
+    margin: auto;
+    width: 70%;
+    height: 30%;
+    padding:10px;
+    border-radius: 15px;
+    margin-top: 10px;
+    border-color:rgba(101,44,179,0.3);
+    text-align: center;
+}
+#txt2 {
+    display: block;
+    border-style: solid;
+    margin: auto;
+    margin-top: 10px;
+    width: 70%;
+    height: 30%;
+    padding:10px;
+    border-radius: 15px;
+    border-color:rgba(101,44,179,0.3);
+    text-align: center;
+}
 .footer1{
   height: 3.5rem;
   width: max-content;
@@ -96,12 +141,11 @@ body{
 }
 
 #dog {
-  height:3.5em;
+  height:3.5rem;
   position: relative;
 }
 #dog:hover{
   animation: flotar 1s;
-  cursor: pointer;
 }
 #txt_well{
   text-align: center;
@@ -122,3 +166,28 @@ body{
   margin-left: -0.8rem;
 }
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9886b2; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #652cb3; 
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+#map {
+  height: 100%;
+}

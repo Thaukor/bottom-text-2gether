@@ -7,8 +7,16 @@
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="/css/maps.css">
-	<script src="/js/mapas.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/maps2.css">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- playground-hide -->
+    <script>
+      const process = { env: {} };
+      process.env.GOOGLE_MAPS_API_KEY =
+        "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg";
+    </script>
+    <script type="module" src="./mapas2.ts"></script>
 </head>
 <body>
 	<div class="topnav" id="myTopnav">
@@ -24,7 +32,7 @@
 <div class="locationviewer">
 	<p id="txt_well">a donde vas usuari@?</p>
 	<input type="text" class="textstyle" id="txt1" value="Universidad de O'Higgins">
-	<select name="sitios" id="txt2">
+	<select name="cars" id="txt2">
 		<option value="none">Elija una ubicacion</option>
 		<option value="Terminal O'Higgins">Terminal O'Higgins</option>
 		<option value="Rodoviario">Rodoviario</option>
@@ -36,9 +44,7 @@
 </div>
 
 	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="mapouter"><div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=Rancagua,%20Universidad%20de%20O'Higgins&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://putlocker-is.org"></a><br><style>.mapouter{position:relative;text-align:right;height:100%;width:100%;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style></div></div>
-			</div>
+		<div class="card" id="map">
 		</div>
 	</div>
 <footer class="footer1">

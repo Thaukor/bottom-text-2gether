@@ -4,18 +4,19 @@
 <head>
 	<title>2gether</title>
    
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
 	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="/css/estilos3.css">
+	<link rel="stylesheet" type="text/css" href="/css/chats.css">
 	<link rel="stylesheet" type="text/css" href="/css/chatv2.css">
+	<script src="/js/mapas.js"></script>
 </head>
 <body>
 <div class="topnav" id="myTopnav">
 		<a href="/log.html" class="active">Salir</a>
 		<a href="chats.html">Chats</a>
 		<a href="/mapas.html">Mapa</a>
-		<a href="#">Cuenta</a>
+		<a href="/cuenta.html">Cuenta</a>
 		<a href="#">Ayuda</a>
 		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 		  <i class="fa fa-bars"></i>
@@ -25,7 +26,7 @@
 <main class="content">
     <div class="container p-0" id="contentchat">
 
-		<h1 class="h3 mb-3">Chats</h1>
+		<h1 class="h3 mb-3" id="titulochat">Chats</h1>
 
 		<div class="card">
 			<div class="row g-0">
@@ -286,6 +287,10 @@
 		</div>
 	</div>
 </main>
+<footer class="footer1">
+	<img src="/recursos/logbom.png" alt="hol4"  id="dog" onpointerover="play()" onclick="rickroll('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+	<p id="bt">bottom text</p>
+	</footer>
 <script>
 	function myFunction() {
 	  var x = document.getElementById("myTopnav");

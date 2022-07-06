@@ -100,7 +100,6 @@ html {
 }
 
 .schedule-list .destination {
-    display: inline-block;
-    font-size: xx-large;
+    font-size: 1.4rem;
     font-weight: bold;
 }

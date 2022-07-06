@@ -21,11 +21,11 @@ class UserScheduleController extends Controller
     public function index()
     {
         $schedule = DB::table('user_schedules')
-                        ->select(['user_schedules.day', 'user_schedules.time', 'user_schedules.destination_id', 'common_locations.location'])
+                        ->select(['user_schedules.id', 'user_schedules.day', 'user_schedules.time', 'user_schedules.destination_id', 'common_locations.location'])
                         ->join('common_locations', 'common_locations.id', '=', 'user_schedules.destination_id')
                         ->where('user_schedules.user_id', auth()->user()->id)
                         ->get();
-                        
+
         return $schedule;
     }
 

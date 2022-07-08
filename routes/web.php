@@ -29,7 +29,7 @@ Route::resource('match', MatchController::class)->only(['show', 'store', 'destro
 
 Route::resource('/profile', UserController::class)->only(['index', 'show'])->middleware('auth');
 
-Route::resource('schedule', UserScheduleController::class)->only(['index', 'store'])->missing(function (Request $request) {
+Route::resource('schedule', UserScheduleController::class)->only(['index', 'store', 'destroy'])->missing(function (Request $request) {
     return Redirect::route('home');
 });
 

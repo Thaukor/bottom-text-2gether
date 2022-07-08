@@ -105,5 +105,9 @@ class UserScheduleController extends Controller
     public function destroy($id)
     {
         //
+        $deleted = DB::table('user_schedules')
+                        ->where('id', $id)
+                        ->delete();
+        return $deleted;
     }
 }

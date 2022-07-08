@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input type="submit" class="btn btn-primary" value="Guardar">
+                        <input id="add-entry-submit" type="submit" class="btn btn-primary" value="Guardar">
                     </div>
                 </form>
             </div>
@@ -76,6 +76,65 @@
     </div>
     
     <!-- Modal end -->
+
+    <div class="modal" id="savedEntryModal" tabindex="-1" aria-labelledby="savedEntryModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="lookForGroupModalLabel">Buscar grupo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form method="post" action="{{ route('schedule.store') }}" id="add-schedule">
+                    <div class="modal-body">
+                        @csrf
+                        <div class="justify-content-center row mb-2">
+                            <div class="col-md-3">
+                                <!-- TODO: Default to current day -->
+                                <label for="day">Día</label>
+                                <select name="day" id="day" class="form-control">
+                                    <option value="1">Lunes</option>
+                                    <option value="2">Martes</option>
+                                    <option value="3">Miércoles</option>
+                                    <option value="4">Jueves</option>
+                                    <option value="5">Viernes</option>
+                                </select>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <label for="time">Hora</label>
+                                <input type="time" name="time" id="time">
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mb-3">
+                            <div class="col-md-7">
+                                <label for="destination">Destino</label>
+                                <select name="destination" id="destination" class="form-control">
+                                    @foreach ($locations as $location)
+                                    <option value="{{ $location->id }}">{{ $location->location }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="row justify-content-center">
+                            <div class="col-md-7">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="repeat" id="repeat">
+                                    <label class="form-check-label" for="repeat">Repetir</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input id="add-entry-submit" type="submit" class="btn btn-primary" value="Guardar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- other modal end  -->
+    <div></div>
+
     <br><br><br><br><br>
     <div class="row">
         <div class="col-md-2"></div>
@@ -219,7 +278,8 @@
         final_html = "" // Replace table rows with this
         elements.forEach(el => {
             id = el['id'];
-            url = "{{ url('/match/" + id + "') }}";
+            url = "{{ url('/match') }}" + '/' + id;
+            console.log(url);
             final_html += formatScheduleEntryHTML(el['location'], el['day'], el['time'], url, id);
         });
 
@@ -227,9 +287,30 @@
         paginate(1);
     }
     
+    function delete_schedule_on( id ) {
+        url = '{{ url("/schedule/") }}' + '/' + id;
+
+        $.ajax({
+            url: url,
+            methods: 'DELETE',
+            data: '_token = {{ csrf_token() }}',
+            success: function(response) {
+                console.log(response);
+                getUserSchedule();
+                alert('Entrada eliminida exitosamente');
+            },
+            error: function(response) {
+                console.log(response);
+                alert('Ocurrió un error al eliminar la entrada');
+            }
+        });
+    }
+
     $('#add-schedule').on('submit', function(event) {
         event.preventDefault();
-        
+        $('#add-entry-submit').prop('disabled', true);
+        $('#add-entry-submit').val('Guardando...');
+
         var url = '{{ route("schedule.store") }}';
         
         $.ajax({
@@ -242,9 +323,16 @@
             processData: false,
             success: function(response) {
                 console.log(response.success);
+                getUserSchedule();
             },
             error: function(response) {
                 console.log(response);
+            },
+            complete: function() {
+                alert('Entrada creada exitosamente');
+
+                $('#add-entry-submit').val('Guardar');
+                $('#add-entry-submit').prop('disabled', false);
             }
         })
     });

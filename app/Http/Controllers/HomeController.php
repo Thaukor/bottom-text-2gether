@@ -29,32 +29,6 @@ class HomeController extends Controller
         return DB::table('common_locations')->get();
     }
 
-    private function get_user_schedules() {
-        // Get the user schedules
-        $sch = DB::table('user_schedules')
-        ->where('user_id', auth()->user()->id)
-        ->get();
-
-        $fsch = [];    
-
-        foreach ($sch as $key => $value) {
-            // Get the destination's name
-            $destination = DB::table('common_locations')
-                ->select('location')
-                ->where('id', $value->destination_id)
-                ->first();
-
-            array_push($fsch, [
-                'id' => $value->id,
-                'day' => Self::dayToString($value->day),
-                'destination' => $destination->location,
-                'time' => $value->time
-            ]);
-        }
-
-        return $fsch;
-    }
-
     /**
      * Show the application dashboard.
      *
@@ -62,8 +36,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $locations = Self::get_locations();
-        $user_schedules = Self::get_user_schedules();
-        return view('home', ['locations' => $locations, 'schedule' => $user_schedules]);
+        return view('home', ['locations' => Self::get_locations()]);
     }
 }

@@ -19,16 +19,17 @@ use App\Http\Controllers\UserScheduleController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::permanentRedirect('/', '/home');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //Route::get('/profile', [UserScheduleController::class, 'index'])->name('profile');
 Route::resource('match', MatchController::class)->only(['show', 'store', 'destroy'])->middleware('auth');
 
 Route::resource('/profile', UserController::class)->only(['index', 'show'])->middleware('auth');
 
-Route::resource('schedule', UserScheduleController::class)->only(['index', 'store'])->missing(function (Request $request) {
+Route::resource('schedule', UserScheduleController::class)->only(['index', 'store', 'destroy'])->missing(function (Request $request) {
     return Redirect::route('home');
 });
 

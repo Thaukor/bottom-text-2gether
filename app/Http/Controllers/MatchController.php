@@ -88,11 +88,12 @@ class MatchController extends Controller
         
         foreach ($members as $key => $value) {
             $user = DB::table('users')
-                ->select('name')
+                ->select('name', 'id')
                 ->where('id', $value->user_id)
                 ->first();
             array_push($f_members, [
-                'name' => $user->name
+                'name' => $user->name,
+                'user_id' => $user->id,
             ]);
         }
 

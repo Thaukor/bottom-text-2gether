@@ -84,11 +84,12 @@
 
 <script>
     function update_members(members) {
-        var html_to_add = ""
+        var html_to_add = "";
         
         members.forEach(element => {
-            id = element['user_id']
-            html_to_add += "<tr><td>" + element['name'] + "</td><td> <a href= '{{ url('profile/" + id + "')}}' class='btn btn-primary'> Ver perfil </td></tr>";
+            console.log(element);
+            id = element['user_id'];
+            html_to_add += "<tr><td>" + element['name'] + "</td><td> <a href= '{{ url('profile')}}/" + id + "' class='btn btn-primary'> Ver perfil </td></tr>";
         });
         
         $('#group-container').html(html_to_add);

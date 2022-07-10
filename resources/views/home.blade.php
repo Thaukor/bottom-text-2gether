@@ -288,12 +288,12 @@
     }
     
     function delete_schedule_on( id ) {
-        url = '{{ url("/schedule/") }}' + '/' + id;
+        url = '{{ url("/schedule") }}/' + id;
 
         $.ajax({
             url: url,
-            methods: 'DELETE',
-            data: '_token = {{ csrf_token() }}',
+            method: 'DELETE',
+            data: {'_token':'{{ csrf_token() }}'},
             success: function(response) {
                 console.log(response);
                 getUserSchedule();

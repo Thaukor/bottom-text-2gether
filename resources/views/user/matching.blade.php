@@ -16,7 +16,8 @@
 
 
 <div class="row">
-    <div class="col-md-4"></div>
+    <div class="col-md-1"></div>
+    
     <div class="col-md-4">
         <div class="row">
             <h2 id="title-group" class="text-center">Buscando grupo</h2>
@@ -37,14 +38,12 @@
             <btn id="search-btn" class="btn btn-success" onclick="start_group_search()"> Buscar grupo </btn>
             <p id="results"></p>
         </form>
-    </div>
-</div>
-<div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-12">
         <hr>
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <form id="user-status" action="" method="post">
                     @csrf
                     <input type="submit" id="user-status-btn" value="Estoy en camino" class="btn btn-warning">
@@ -61,8 +60,8 @@
     
 </div>
 <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-2"></div>
+    <div class="col-md-12">
         <hr>
         <div class="card">
             <div class="card-header">
@@ -79,6 +78,29 @@
         </div>
     </div>
 </div>
+    </div>
+    <div class="col-md-6">
+
+    <div class="col-md-11">
+    <div class="card" id="chatstyle">
+            <div class="card-header">
+                <h4 class="text-center">Chat de Grupo</h4>
+            </div>
+            <div class="card-body">
+                <form id="user-status" action="" method="post">
+                    @csrf
+                    <input type="submit" id="user-status-btn" value="Enviar" class="btn btn-warning">
+                </form>
+            </div>
+            
+    </div>
+
+    
+    </div>
+    </div>
+
+</div>
+
 
 
 

@@ -103,3 +103,8 @@ html {
     font-size: 1.4rem;
     font-weight: bold;
 }
+
+#chatstyle {
+    background-color: plum;
+    min-height:60vh;
+}

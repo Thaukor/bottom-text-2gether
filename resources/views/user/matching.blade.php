@@ -2,6 +2,7 @@
 
 @section('css_links')
 <link href="{{ asset('css/estilos2.css') }}" rel="stylesheet">
+<link href="{{ asset('css/chatstyle.css') }}" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/match.css') }}">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 <style>
@@ -81,18 +82,74 @@
     </div>
     <div class="col-md-6">
 
-    <div class="col-md-11">
-    <div class="card" id="chatstyle">
-            <div class="card-header">
-                <h4 class="text-center">Chat de Grupo</h4>
+<div class="col-md-11">
+    <!--...-->
+    <section style="background-color: #eee;">
+  <div class="container" id="cont_general">
+
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-12 col-lg-12 col-xl-12">
+
+        <div class="card">
+          <div class="card-header d-flex justify-content-between align-items-center p-3"
+            style="border-top: 4px solid plum;">
+            <h5 class="mb-0">Chat de grupo</h5>
+
+
+
+          </div>
+          <div class="card-body" data-mdb-perfect-scrollbar="true" style="position: relative; height: 400px">
+
+            <!--  OTRO PARTICIPANTE sussy baka -->
+                <div class="d-flex justify-content-between">
+                <p class="small mb-1">Otro usuario</p>
+                <p class="small mb-1 text-muted">23 Jan 5:37 pm</p>
+                </div>
+                <div class="d-flex flex-row justify-content-start">
+                <img src="{{ asset('img/chola.jpg') }}"
+                    alt="avatar 1" style="width: 45px; height: 100%;">
+                <div>
+                    <p class="small p-2 ms-3 mb-3 rounded-3" style="background-color: #f5f6f7;">Estimado gustaria de acompañarme al terminal de microbuses?</p>
+                </div>
+                </div>
+            <!-- termina el mensaje del OTRO PARTICIPANTE-->
+
+            <!-- EMPIEZA MSG USUARIO-->
+                <div class="d-flex justify-content-between">
+                <p class="small mb-1 text-muted">horamensaje</p>
+                <p class="small mb-1">Nombre usuario</p>
+                </div>
+                <div class="d-flex flex-row justify-content-end mb-4 pt-1">
+                <div>
+                    <p class="small p-2 me-3 mb-3 text-white rounded-3 bg-warning" id="user_msg">sussy sussy sussy sussy sussy sussy sussy </p>
+                </div>
+                <img src="{{ asset('img/petrol.jpg') }}"
+                    alt="avatar 1" style="width: 45px; height: 100%;">
+                </div>
             </div>
-            <div class="card-body">
-                <form id="user-status" action="" method="post">
-                    @csrf
-                    <input type="submit" id="user-status-btn" value="Enviar" class="btn btn-warning">
-                </form>
+          <!-- TERMINA LA WEA-->
+
+
+          <!-- EMPIEZA EL BOTON Y EL CAMPO-->
+          <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+            <div class="input-group mb-0">
+              <input type="text" class="form-control" placeholder="Escribe un mensaje"
+                aria-label="Recipient's username" aria-describedby="button-addon2" />
+              <button class="btn btn-warning" type="button" id="user_msg" style="padding-top: .55rem;" >
+                Enviar
+              </button>
             </div>
-            
+          </div>
+
+          <!-- TERMINA ESA SECCION-->
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--...-->      
     </div>
 
     

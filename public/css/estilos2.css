@@ -104,7 +104,9 @@ html {
     font-weight: bold;
 }
 
-#chatstyle {
+#chatcol{
     background-color: plum;
-    min-height:60vh;
+    min-height:100vh;
+    border-radius:10px;
 }
+

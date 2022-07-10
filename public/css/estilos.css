@@ -17,7 +17,7 @@ html,body{
 
 .card{
     height:fit-content;
-    margin-top: auto;
+    margin-top: 10vh;
     margin-bottom: auto;
     width: 400px;
     background-color: rgba(0, 0, 0, 0.7) !important;

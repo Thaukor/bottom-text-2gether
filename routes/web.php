@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MatchController;
+use App\Http\Controllers\ChatController;
 use App\Http\Controllers\UserScheduleController;
 
 /*
@@ -31,7 +32,9 @@ Route::resource('/profile', UserController::class)->only(['index', 'show'])->mid
 
 Route::resource('schedule', UserScheduleController::class)->only(['index', 'store', 'destroy'])->missing(function (Request $request) {
     return Redirect::route('home');
-});
+})->middleware('auth');
+
+Route::resource('chat', ChatController::class)->only(['store', 'show'])->middleware('auth');
 
 Route::get('/location/{name}', [UserScheduleController::class, 'get_location']);
 

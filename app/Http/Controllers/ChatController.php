@@ -57,10 +57,11 @@ class ChatController extends Controller
     {
         // Get all messages on this group
         $messages = DB::table('group_chats')
-            ->select(['group_chats.message', 'users.name'])
+            ->select(['group_chats.message', 'group_chats.user_id', 'users.name'])
             ->join('users', 'users.id', '=', 'group_chats.user_id')
             ->where('group_chats.group_id', $id)
             ->orderBy('sent_at', 'desc')
+            ->limit(4)
             ->get();
         
         return $messages;

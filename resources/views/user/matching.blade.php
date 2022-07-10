@@ -112,13 +112,15 @@
                             
                             <!-- EMPIEZA EL BOTON Y EL CAMPO-->
                             <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
-                                <div class="input-group mb-0">
-                                    <input type="text" class="form-control" placeholder="Escribe un mensaje"
+                                <form id="message-form" class="input-group mb-0" method="post">
+                                    @csrf
+                                    <input id="msg" type="text" class="form-control" name="msg" placeholder="Escribe un mensaje"
                                     aria-label="Recipient's username" aria-describedby="button-addon2" />
-                                    <button class="btn btn-warning" type="button" id="user_msg" style="padding-top: .55rem;" >
+                                    <input type="submit" value="Enviar" class="btn btn-warning" style="padding-top: .55rem;">
+                                    <!-- <button class="btn btn-warning" type="button" id="user_msg" style="padding-top: .55rem;" >
                                         Enviar
-                                    </button>
-                                </div>
+                                    </button> -->
+                                </form>
                             </div>
                             
                             <!-- TERMINA ESA SECCION-->
@@ -140,6 +142,12 @@
 
 
 <script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     // Chat messages base HTML
     other_message_base_HTML = `
     <div class="d-flex justify-content-between">
@@ -169,35 +177,36 @@
     </div>
     `
     
-    function add_msg() {
+    $('#message-form').on('submit', function (event) {
+        event.preventDefault();
+
         url = '{{ route("chat.store") }}';
+
         $.ajax({
             url: url,
             method: 'POST',
             data: {
                 '_token': '{{ csrf_token() }}',
-                'msg': 'mega sus',
+                'msg': $('#msg').val(),
                 'group_id': group_id
             },
             dataType: 'JSON',
             success: function(response){
                 console.log(response);
+                $('#msg').val('');
             },
             error: function(response) {
                 console.log(response);
             }
         });
-    }
+    });
     
     function get_msg() {
-        console.log("SUSSY");
-
         url = '{{ url("chat") }}/' + group_id;
         $.ajax({
             url: url,
             method: 'GET',
             success: function(response) {
-                console.log(response);
                 show_msg(response);
             },
             error: function(response) {
@@ -253,7 +262,7 @@
         $('#search-btn').html('Buscando');
         
         interval = setInterval(update_group, 5000);
-        chat_interval = setInterval(get_msg, 2000);
+        chat_interval = setInterval(get_msg, 5000);
     }
     
     function update_group() {

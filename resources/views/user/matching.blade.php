@@ -79,15 +79,49 @@
         </div>
     </div>
 </div>
-
+<button class="btn btn-primary" onclick="add_msg()">Sussy baka</button>
+<button class="btn btn-primary" onclick="get_msg()">Sussy sus</button>
 
 
 <script>
+    function add_msg() {
+        url = '{{ route("chat.store") }}';
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: {
+                '_token': '{{ csrf_token() }}',
+                'msg': 'mega sus',
+                'group_id': group_id
+            },
+            dataType: 'JSON',
+            success: function(response){
+                console.log(response);
+            },
+            error: function(response) {
+                console.log(response);
+            }
+        });
+    }
+
+    function get_msg() {
+        url = '{{ url("chat") }}/' + group_id;
+        $.ajax({
+            url: url,
+            method: 'GET',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(response) {
+                console.log(response);
+            }
+        });
+    }
+
     function update_members(members) {
         var html_to_add = "";
         
         members.forEach(element => {
-            console.log(element);
             id = element['user_id'];
             html_to_add += "<tr><td>" + element['name'] + "</td><td> <a href= '{{ url('profile')}}/" + id + "' class='btn btn-primary'> Ver perfil </td></tr>";
         });
@@ -125,7 +159,6 @@
             cache: false,
             processData: false,
             success: function(response) {
-                console.log(response);
                 update_members(response.members);
                 if (!group_found) {
                     group_found = true;

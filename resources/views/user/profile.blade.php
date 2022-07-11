@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="{{ asset('css/perfil.css') }}" rel="stylesheet">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
@@ -12,7 +13,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-3">
-                            <img src="https://pwco.com.sg/wp-content/uploads/2020/05/Generic-Profile-Placeholder-v3-800x800.png" class="img-fluid" width="" height="" alt="User profile photo">
+                            <img src="{{ asset('img/petrol.jpg') }}" class="img-fluid" width="" height="" alt="User profile photo" id="user_photo">
                         </div>
                         <div class="col-md-9">
                             <h4 class="user-name">{{ Auth::user()->name }}</h4>
@@ -26,7 +27,7 @@
                         
                         <div class="row pt-4">
                             <div class="col-md-12">
-                                <button class="btn btn-primary text-center">Editar</button>
+                                <button class="btn btn-primary text-center" id="edit_btn">Editar</button>
                             </div>
                         </div>
                     </div>
@@ -61,7 +62,7 @@
                         
                         <hr>
                         
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addNew" disabled>Editar</button>
+                        <button class="btn btn-primary" id="edit_btn" data-bs-toggle="modal" data-bs-target="#addNew" disabled>Editar</button>
                     </div>
                     
                     <!-- User schedule modal -->

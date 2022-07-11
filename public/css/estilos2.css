@@ -9,6 +9,14 @@ html {
     min-height: 100%;
 }
 
+#edit_btn {
+    background-color: #652cb3;
+}
+
+#add-entry-submit {
+    background-color: #652cb3;
+}
+
 .main-content {
     margin-bottom: 4.5rem;
 }
@@ -55,9 +63,9 @@ html {
 }
 
 .footer1{
-    height: 4.5rem;
+    height: fit-content;
     /* width: max-content; */
-    background-color: rgba(18, 2, 41, 0.616);
+   
     width: 100%;
     margin-top: 4.5rem;
     margin-bottom: 0;
@@ -70,8 +78,9 @@ html {
 }
 
 #dog {
-    height:3.5em;
-    position: relative;
+    height:4em;
+    position:relative;
+    display: inline-block;
 }
 #dog:hover{
     animation: flotar 1s;
@@ -81,6 +90,8 @@ html {
     text-align: center;
     font-weight: bolder;
     color:rgb(80, 80, 80);
+
+    
 }
 
 @keyframes flotar {
@@ -93,10 +104,10 @@ html {
 #bt {
     display: inline;
     color: #ddd;
-    background-color: rgba(103, 40, 3, 0.583);
+    background-color: rgba(103, 40, 3, 0.7);
     border-radius: 3px;
-    /* padding:0.3em; */
-    /* margin-left: -0.8rem; */
+    padding: 5px;
+
 }
 
 .schedule-list .destination {
@@ -110,3 +121,23 @@ html {
     border-radius:10px;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #9886b2; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #652cb3; 
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

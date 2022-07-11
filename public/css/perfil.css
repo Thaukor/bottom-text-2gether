@@ -1,0 +1,35 @@
+body {
+    background-color: rgba(101,44,179,0.3);
+}
+
+#edit_btn {
+    background-color: #652cb3;
+}
+#edit_btn2 {
+    background-color: #652cb3;
+    ;
+}
+
+#user_photo{
+    border-radius: 5px;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #9886b2; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #652cb3; 
+    border-radius: 3px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

@@ -116,7 +116,7 @@
                                     @csrf
                                     <input id="msg" type="text" class="form-control" name="msg" placeholder="Escribe un mensaje"
                                     aria-label="Recipient's username" aria-describedby="button-addon2" />
-                                    <input type="submit" value="Enviar" class="btn btn-warning" style="padding-top: .55rem;">
+                                    <input type="submit" value="Enviar" class="btn btn-warning" style="padding-top: .55rem;" id="user_msg">
                                     <!-- <button class="btn btn-warning" type="button" id="user_msg" style="padding-top: .55rem;" >
                                         Enviar
                                     </button> -->

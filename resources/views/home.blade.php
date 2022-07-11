@@ -61,8 +61,7 @@
                         <div class="row justify-content-center">
                             <div class="col-md-7">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="repeat" id="repeat">
-                                    <label class="form-check-label" for="repeat">Repetir</label>
+
                                 </div>
                             </div>
                         </div>
@@ -126,7 +125,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <input id="add-entry-submit" type="submit" class="btn btn-primary" value="Guardar">
+                        <input id="add-entry-submit" type="submit" class="btn btn-primary" value="Guardar" id="edit_btn">
                     </div>
                 </form>
             </div>

@@ -9,7 +9,10 @@
     <div class="d-flex justify-content-center h-100">
         <div class="card ">
             <div class="card-header">
-                <img src="{{ asset('img/logo2gether.png') }}" alt="asd">
+                <!-- <img src="{{ asset('img/logo2gether.png') }}" alt="asd"> -->
+                
+                <img src="{{ asset('img/logo2gether.png') }}" alt="asd" id="getherlogo">
+                
                 <h3 class="text-center">Iniciar sesión</h3>
                 <div class="d-flex justify-content-end social_icon">
                     

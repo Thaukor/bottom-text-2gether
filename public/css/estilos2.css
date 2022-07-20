@@ -1,14 +1,26 @@
 html {
-    background-color: rgba(101,44,179,0.3);
+    background: rgb(101,44,179);
+    background: linear-gradient(90deg, rgba(101,44,179,1) 17%, rgba(130,21,131,1) 50%, rgba(103,46,180,1) 80%);
+    
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
-
     position: relative;
     min-height: 100%;
 }
-
+h2 {
+    color: white;
+}
+.destination{
+    color: white;
+}
+td {
+    color: white !important;
+}
+#tablap{
+    color: white;
+}
 #edit_btn {
     background-color: #652cb3;
 }

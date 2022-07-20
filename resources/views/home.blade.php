@@ -139,7 +139,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <div class="schedule-list">
-                <table class="table table-striped align-middle">
+                <table class="table table-striped align-middle" id="tablap">
                     <thead>
                         <tr class="text-center">
                             <td colspan="4" width="100%"><h2>Revisa tus entradas creadas</h2></td>
@@ -342,6 +342,6 @@
 @section('footer')
 <footer class="footer1">
     <img src="{{ asset('img/logbom.png') }}" alt="hol4"  id="dog" onpointerover="play()" onclick="rickroll('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
-    <p id="bt">bottom text</p>
+    <!-- <p id="bt">bottom text</p> -->
 </footer>
 @endsection
